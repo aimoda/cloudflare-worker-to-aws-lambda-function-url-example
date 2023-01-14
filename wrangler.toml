@@ -1,0 +1,20 @@
+name = "lambda-demo-worker-dev"
+main = "./src/index.ts"
+compatibility_date = "2023-01-13"
+usage_model = "unbound"
+workers_dev = false
+
+[dev]
+ip = "127.0.0.1"
+local_protocol = "http"
+
+[vars]
+ENVIRONMENT = "dev"
+
+[env.production]
+name = "lambda-demo-worker"
+usage_model = "bundled" # You can probably get away with bundled instead of unbound
+# route = { pattern = "public.example.com", custom_domain = true }
+
+[env.production.vars]
+ENVIRONMENT = "production"
