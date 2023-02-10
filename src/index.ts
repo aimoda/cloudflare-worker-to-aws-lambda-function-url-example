@@ -40,6 +40,7 @@ export default {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(submit_body),
+			redirect: "manual"
 		})
 
 		return lambdaResponse;
